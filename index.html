@@ -2,10 +2,239 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web Development Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Principles & Best Practices</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-btn {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #444444;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-one {
+            background-color: #f0f0f0;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section-one h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .grid-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .placeholder-box {
+            background-color: #cbd2d9;
+            height: 160px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333333;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .section-two {
+            background-color: #ffffff;
+            padding: 60px 8%;
+        }
+
+        .section-two h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .split-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .split-image {
+            flex: 1;
+            min-width: 280px;
+            background-color: #cbd2d9;
+            height: 240px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .split-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .split-text p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .split-text ul {
+            margin-left: 20px;
+        }
+
+        .split-text li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>Hosted with GitHub Pages.</p>
+
+    <header>
+        <div class="logo">WEB DESIGN GUIDE</div>
+        <nav aria-label="Main Navigation">
+            <a href="#home">HOME</a>
+            <a href="#principles">PRINCIPLES</a>
+            <a href="#practices">BEST PRACTICES</a>
+            <a href="#contact" class="nav-btn">CONTACT</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <h1>Web Design & Layout Principles</h1>
+            <p>A practical guide to creating accessible, well-structured, and user-friendly front-end websites.</p>
+        </section>
+
+        <section id="principles" class="section-one">
+            <h2>Section 1: Core Principles</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <div class="placeholder-box" role="img" aria-label="Visual Hierarchy Diagram Placeholder">Visual Hierarchy Graphic</div>
+                    <h3>Visual Hierarchy</h3>
+                    <p>Arrange elements by importance using size, contrast, and spacing so visitors immediately see what matters most.</p>
+                </article>
+
+                <article class="card">
+                    <div class="placeholder-box" role="img" aria-label="Grid Systems Diagram Placeholder">Grid Systems Graphic</div>
+                    <h3>Grid Systems</h3>
+                    <p>Align content into clean rows and columns to keep layouts organized, balanced, and easy to scan across devices.</p>
+                </article>
+
+                <article class="card">
+                    <div class="placeholder-box" role="img" aria-label="Accessibility Diagram Placeholder">Accessibility Graphic</div>
+                    <h3>Accessibility</h3>
+                    <p>Use semantic HTML tags, clear color contrast, and descriptive labels so everyone can navigate your website.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="practices" class="section-two">
+            <h2>Section 2: Quick Best Practices</h2>
+            <div class="split-container">
+                <div class="split-image" role="img" aria-label="Best Practices Illustration Placeholder">
+                    Layout Best Practices Visual
+                </div>
+                <div class="split-text">
+                    <p>Following fundamental front-end rules ensures your website loads quickly and works smoothly on both desktop and mobile screens.</p>
+                    <ul>
+                        <li>Keep navigation menus simple and consistent across every page.</li>
+                        <li>Use readable font sizes and high-contrast text colors.</li>
+                        <li>Add descriptive alt text and ARIA labels to non-text elements.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 Web Development Project | Built with HTML &amp; CSS</p>
+    </footer>
+
 </body>
 </html>
