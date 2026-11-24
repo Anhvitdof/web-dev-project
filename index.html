@@ -1,215 +1,63 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Beginner guide to basic web design, layout rules, and website accessibility.">
+  <title>Web Design Basics - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #222222;
-  background-color: #f9f9f9;
-}
+  <header>
+    <a href="index.html" class="logo">WebDesign101</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="principles.html">Principles</a></li>
+        <li><a href="layout.html">Layout</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-header {
-  background-color: #ffffff;
-  border-bottom: 2px solid #dddddd;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  <main>
+    <section class="hero">
+      <h1>Web Design &amp; Layout Basics</h1>
+      <p>Building a good website is not just about making it look nice. It needs clear navigation, readable text, and a layout that works on both phones and computers.</p>
+      <a href="principles.html" class="btn">Explore Design Principles</a>
+    </section>
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #1a4b84;
-  text-decoration: none;
-}
+    <section class="card-row">
+      <div class="card">
+        <h3>Visual Hierarchy</h3>
+        <p>Using different heading sizes and spacing helps visitors spot the most important information right away.</p>
+      </div>
+      <div class="card">
+        <h3>Responsive Layout</h3>
+        <p>Flexible CSS containers let content stack neatly on smaller phone screens without sideways scrolling.</p>
+      </div>
+      <div class="card">
+        <h3>Accessibility</h3>
+        <p>High color contrast, semantic HTML tags, and image alt text make websites usable for everyone.</p>
+      </div>
+    </section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+    <section class="content-box">
+      <h2>Helpful Web Standards Resources</h2>
+      <p>If you want to check official guidelines while building your own site, these three resources are useful:</p>
+      <ul class="content-list">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">MDN Web Docs - Learn Web Development</a></li>
+        <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">W3C Web Content Accessibility Guidelines (WCAG)</a></li>
+        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C HTML Markup Validation Service</a></li>
+      </ul>
+    </section>
+  </main>
 
-nav a {
-  text-decoration: none;
-  color: #222222;
-  font-weight: bold;
-  padding: 12px 15px;
-  display: inline-block;
-  border-radius: 4px;
-}
-
-nav a:hover, nav a.active {
-  background-color: #1a4b84;
-  color: #ffffff;
-}
-
-main {
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-.hero {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  padding: 30px;
-  margin-bottom: 25px;
-  border-radius: 6px;
-}
-
-h1 {
-  font-size: 28px;
-  color: #1a4b84;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 22px;
-  color: #1a4b84;
-  margin-bottom: 12px;
-}
-
-h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-.card-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-}
-
-.card {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  padding: 20px;
-  border-radius: 6px;
-  flex: 1 1 280px;
-}
-
-.content-box {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  padding: 25px;
-  border-radius: 6px;
-  margin-bottom: 25px;
-}
-
-.content-list {
-  margin-left: 25px;
-  margin-bottom: 15px;
-}
-
-.content-list li {
-  margin-bottom: 8px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #1a4b84;
-  color: #ffffff;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #12345c;
-}
-
-/* Table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: #ffffff;
-}
-
-th, td {
-  border: 1px solid #cccccc;
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  background-color: #1a4b84;
-  color: #ffffff;
-}
-
-/* Form styling */
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #bbbbbb;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 16px;
-}
-
-.error-msg {
-  color: #b30000;
-  font-size: 14px;
-  margin-top: 4px;
-  display: block;
-}
-
-.success-box {
-  background-color: #e6f4ea;
-  border: 1px solid #34a853;
-  color: #1e4620;
-  padding: 15px;
-  border-radius: 4px;
-  margin-top: 15px;
-  display: none;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
-  border-top: 1px solid #dddddd;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-  nav a {
-    width: 100%;
-    min-height: 46px;
-  }
-}
+  <footer>
+    <p>&copy; 2026 WebDesign101 Student Project</p>
+  </footer>
 
 </body>
 </html>
