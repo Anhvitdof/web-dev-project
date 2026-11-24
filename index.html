@@ -3,60 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Beginner guide to basic web design, layout rules, and website accessibility.">
-  <title>Web Design Basics - Home</title>
+  <meta name="description" content="Informational guide to core web design principles, visual hierarchy, grid systems, and accessibility.">
+  <title>Home - Web Design Guide</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="logo">WebDesign101</a>
+    <a href="index.html" class="logo">LOGO/BRAND</a>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="principles.html">Principles</a></li>
-        <li><a href="layout.html">Layout</a></li>
-        <li><a href="accessibility.html">Accessibility</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="divider"><a href="index.html" class="active">HOME</a></li>
+        <li class="divider"><a href="about.html">ABOUT</a></li>
+        <li class="divider"><a href="topics.html">TOPICS</a></li>
+        <li><a href="contact.html" class="nav-pill">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Main Banner matching wireframe -->
+    <section class="main-banner">
       <h1>Web Design &amp; Layout Basics</h1>
-      <p>Building a good website is not just about making it look nice. It needs clear navigation, readable text, and a layout that works on both phones and computers.</p>
-      <a href="principles.html" class="btn">Explore Design Principles</a>
+      <p>A straightforward student guide to building clean, readable, and accessible websites from scratch.</p>
     </section>
 
-    <section class="card-row">
-      <div class="card">
-        <h3>Visual Hierarchy</h3>
-        <p>Using different heading sizes and spacing helps visitors spot the most important information right away.</p>
-      </div>
-      <div class="card">
-        <h3>Responsive Layout</h3>
-        <p>Flexible CSS containers let content stack neatly on smaller phone screens without sideways scrolling.</p>
-      </div>
-      <div class="card">
-        <h3>Accessibility</h3>
-        <p>High color contrast, semantic HTML tags, and image alt text make websites usable for everyone.</p>
+    <!-- Section 1: Core Principles (Gray Band + 3 Columns) -->
+    <section class="section-gray">
+      <div class="section-inner">
+        <h2 class="section-title">Section 1: Core Principles</h2>
+
+        <div class="three-col">
+          <div class="col-card">
+            <div class="img-box">Image Box</div>
+            <h3>Visual Hierarchy</h3>
+            <p>Organizing headings, text size, and spacing so visitors immediately see what matters most.</p>
+          </div>
+
+          <div class="col-card">
+            <div class="img-box">Image Box</div>
+            <h3>Grid Systems</h3>
+            <p>Using consistent rows and columns to align content neatly across desktop and mobile screens.</p>
+          </div>
+
+          <div class="col-card">
+            <div class="img-box">Image Box</div>
+            <h3>Accessibility</h3>
+            <p>Ensuring high color contrast, clear labels, and keyboard navigation so everyone can use the site.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="content-box">
-      <h2>Helpful Web Standards Resources</h2>
-      <p>If you want to check official guidelines while building your own site, these three resources are useful:</p>
-      <ul class="content-list">
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">MDN Web Docs - Learn Web Development</a></li>
-        <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">W3C Web Content Accessibility Guidelines (WCAG)</a></li>
-        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C HTML Markup Validation Service</a></li>
-      </ul>
+    <!-- Section 2: Quick Best Practices (White Section + Left Box + Right Text & Bullets) -->
+    <section class="section-white">
+      <div class="section-inner">
+        <h2 class="section-title">Section 2: Quick Best Practices</h2>
+
+        <div class="two-col">
+          <div class="two-col-left">
+            <div class="img-box">Image Box</div>
+          </div>
+
+          <div class="two-col-right">
+            <p>Good informational websites keep layouts simple and predictable so readers can scan information without getting distracted by clutter.</p>
+            <ul>
+              <li>Keep body text at least 16px with 1.5 line spacing</li>
+              <li>Use one external CSS stylesheet across every page</li>
+              <li>Include descriptive alt text on all images</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 WebDesign101 Student Project</p>
+    <p>&copy; 2026 Web Design Informational Guide | <a href="resources.html">External Resources</a></p>
   </footer>
 
 </body>
