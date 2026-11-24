@@ -3,95 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Send feedback or questions about web design principles.">
-  <title>Contact - WebDesign101</title>
+  <meta name="description" content="Contact page with form validation for questions and feedback on web design.">
+  <title>Contact - Web Design Guide</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="logo">WebDesign101</a>
+    <a href="index.html" class="logo">LOGO/BRAND</a>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="principles.html">Principles</a></li>
-        <li><a href="layout.html">Layout</a></li>
-        <li><a href="accessibility.html">Accessibility</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li class="divider"><a href="index.html">HOME</a></li>
+        <li class="divider"><a href="about.html">ABOUT</a></li>
+        <li class="divider"><a href="topics.html">TOPICS</a></li>
+        <li><a href="contact.html" class="nav-pill active">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="content-box">
-      <h1>Send Feedback or Questions</h1>
-      <p>Spot a broken link or have a question about HTML and CSS? Fill out the form below.</p>
+    <section class="main-banner">
+      <h1>Contact Us</h1>
+      <p>Have a question about the guide or spot something that can be improved? Send a note below.</p>
+    </section>
 
-      <form id="feedbackForm" novalidate>
-        <div class="form-group">
-          <label for="userName">Your Name:</label>
-          <input type="text" id="userName" name="userName">
-          <span class="error-msg" id="nameError"></span>
+    <section class="section-gray">
+      <div class="section-inner">
+        <div class="subpage-box">
+          <h2 class="section-title">Send a Message</h2>
+
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName">
+              <span class="error-msg" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="emailAddress">Email Address:</label>
+              <input type="email" id="emailAddress" name="emailAddress">
+              <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="messageText">Message:</label>
+              <textarea id="messageText" name="messageText" rows="4"></textarea>
+              <span class="error-msg" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn-dark">Submit</button>
+          </form>
+
+          <div class="success-box" id="formSuccess">
+            Thanks! Your message has been submitted.
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="userEmail">Email Address:</label>
-          <input type="email" id="userEmail" name="userEmail">
-          <span class="error-msg" id="emailError"></span>
-        </div>
-
-        <div class="form-group">
-          <label for="userMessage">Message:</label>
-          <textarea id="userMessage" name="userMessage" rows="4"></textarea>
-          <span class="error-msg" id="messageError"></span>
-        </div>
-
-        <button type="submit" class="btn">Submit Message</button>
-      </form>
-
-      <div class="success-box" id="successBox">
-        Thanks! Your message has been received.
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 WebDesign101 Student Project</p>
+    <p>&copy; 2026 Web Design Informational Guide | <a href="resources.html">External Resources</a></p>
   </footer>
 
   <script>
-    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
-      var name = document.getElementById("userName").value.trim();
-      var email = document.getElementById("userEmail").value.trim();
-      var message = document.getElementById("userMessage").value.trim();
-
-      var isValid = true;
+      var name = document.getElementById("fullName").value.trim();
+      var email = document.getElementById("emailAddress").value.trim();
+      var message = document.getElementById("messageText").value.trim();
+      var valid = true;
 
       document.getElementById("nameError").textContent = "";
       document.getElementById("emailError").textContent = "";
       document.getElementById("messageError").textContent = "";
-      document.getElementById("successBox").style.display = "none";
+      document.getElementById("formSuccess").style.display = "none";
 
       if (name === "") {
         document.getElementById("nameError").textContent = "Please enter your name.";
-        isValid = false;
+        valid = false;
       }
 
       if (email === "" || email.indexOf("@") === -1) {
         document.getElementById("emailError").textContent = "Please enter a valid email address.";
-        isValid = false;
+        valid = false;
       }
 
       if (message === "") {
-        document.getElementById("messageError").textContent = "Please write a short message.";
-        isValid = false;
+        document.getElementById("messageError").textContent = "Please enter a message.";
+        valid = false;
       }
 
-      if (isValid) {
-        document.getElementById("successBox").style.display = "block";
-        document.getElementById("feedbackForm").reset();
+      if (valid) {
+        document.getElementById("formSuccess").style.display = "block";
+        document.getElementById("contactForm").reset();
       }
     });
   </script>
