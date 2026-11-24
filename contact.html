@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send feedback or questions about web design principles.">
+  <title>Contact - WebDesign101</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">WebDesign101</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="principles.html">Principles</a></li>
+        <li><a href="layout.html">Layout</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-box">
+      <h1>Send Feedback or Questions</h1>
+      <p>Spot a broken link or have a question about HTML and CSS? Fill out the form below.</p>
+
+      <form id="feedbackForm" novalidate>
+        <div class="form-group">
+          <label for="userName">Your Name:</label>
+          <input type="text" id="userName" name="userName">
+          <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="userEmail">Email Address:</label>
+          <input type="email" id="userEmail" name="userEmail">
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="userMessage">Message:</label>
+          <textarea id="userMessage" name="userMessage" rows="4"></textarea>
+          <span class="error-msg" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="btn">Submit Message</button>
+      </form>
+
+      <div class="success-box" id="successBox">
+        Thanks! Your message has been received.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WebDesign101 Student Project</p>
+  </footer>
+
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("userName").value.trim();
+      var email = document.getElementById("userEmail").value.trim();
+      var message = document.getElementById("userMessage").value.trim();
+
+      var isValid = true;
+
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("messageError").textContent = "";
+      document.getElementById("successBox").style.display = "none";
+
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Please enter your name.";
+        isValid = false;
+      }
+
+      if (email === "" || email.indexOf("@") === -1) {
+        document.getElementById("emailError").textContent = "Please enter a valid email address.";
+        isValid = false;
+      }
+
+      if (message === "") {
+        document.getElementById("messageError").textContent = "Please write a short message.";
+        isValid = false;
+      }
+
+      if (isValid) {
+        document.getElementById("successBox").style.display = "block";
+        document.getElementById("feedbackForm").reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
