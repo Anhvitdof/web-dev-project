@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to structure website layouts using semantic HTML and CSS Flexbox.">
+  <title>Page Layout - WebDesign101</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">WebDesign101</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="principles.html">Principles</a></li>
+        <li><a href="layout.html" class="active">Layout</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-box">
+      <h1>Structuring a Clean Layout</h1>
+      <p>Before writing CSS, it helps to break a page down into clear structural sections using semantic HTML tags.</p>
+
+      <h2>Basic Page Sections</h2>
+      <ul class="content-list">
+        <li><strong>Header &amp; Nav:</strong> Stays at the top of every page in the exact same order so visitors never get lost.</li>
+        <li><strong>Main Content:</strong> Holds the primary headings, paragraphs, tables, or cards for that specific page.</li>
+        <li><strong>Footer:</strong> Sits at the bottom with copyright details or extra reference links.</li>
+      </ul>
+
+      <h2>Why Use External CSS?</h2>
+      <p>Linking one <code>style.css</code> file to all five HTML pages means you only have to update colors or fonts in one place instead of editing every file separately.</p>
+
+      <a href="accessibility.html" class="btn">Next: Accessibility Tips</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WebDesign101 Student Project</p>
+  </footer>
+
+</body>
+</html>
